@@ -1,5 +1,7 @@
 class BlogsController < ApplicationController
+#データ1件だけ取得。
   def show
+    @blog = Blog.find(params[:id])#取得後インスタンス変数としてビューへ
   end
 
 #topページに対応するアクションindex.投稿されたのを取得する
