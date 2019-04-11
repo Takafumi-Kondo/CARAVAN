@@ -53,8 +53,8 @@
       <p class="single-text">
         <%= @blog.body %>
       </p>
- 
-      <a href="#">編集</a>
+<!-- 編集部分 -->
+      <%= link_to "編集", edit_blog_path(@blog) %>
       <a href="#">削除</a>
  
       <div class="author-case clearfix">

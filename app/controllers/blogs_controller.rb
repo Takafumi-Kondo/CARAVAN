@@ -14,7 +14,15 @@ class BlogsController < ApplicationController
   end
 
   def edit
+    @blog = Blog.find(params[:id])#投稿記事と同じく編集もデータ１件。BlogDBから探す
   end
+#編集後の保存アクション。ビュー無しリダイレクト先設定
+  def update
+    blog = Blog.find(params[:id])
+    blog.update(blog_params)
+    redirect_to blog_path(blog)
+  end
+
 #投稿保存createアク追加
   def create
   	blog = Blog.new(blog_params)

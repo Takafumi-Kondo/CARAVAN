@@ -861,3 +861,54 @@ Processing by BlogsController#show as HTML
 Completed 200 OK in 197ms (Views: 158.7ms | ActiveRecord: 2.6ms)
 
 
+Started GET "/blogs/1/edit" for 10.0.2.2 at 2019-04-11 02:52:47 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by BlogsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBlog Load (1.4ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" WHERE "blogs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/blogs_controller.rb:17
+  Rendering blogs/edit.html.erb within layouts/application
+  Rendered blogs/edit.html.erb within layouts/application (11.1ms)
+Completed 200 OK in 1174ms (Views: 1100.7ms | ActiveRecord: 7.1ms)
+
+
+Started PATCH "/blogs/1" for 10.0.2.2 at 2019-04-11 02:53:28 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BlogsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"g4vTmsRmP2zbszPaHoxCiMD5jfla2BJBFBBfBzi/7pdZlFB95TJ33v2wuXL6jfr4Kw4FyGEBLqmdbhDyg/lSNg==", "blog"=>{"title"=>"編集", "category"=>"編集", "body"=>"編集"}, "commit"=>"保存", "id"=>"1"}
+  [1m[36mBlog Load (2.6ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" WHERE "blogs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/blogs_controller.rb:21
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/blogs_controller.rb:22
+  [1m[36mBlog Update (8.8ms)[0m  [1m[33mUPDATE "blogs" SET "title" = ?, "category" = ?, "body" = ?, "updated_at" = ? WHERE "blogs"."id" = ?[0m  [["title", "編集"], ["category", "編集"], ["body", "編集"], ["updated_at", "2019-04-11 02:53:28.196445"], ["id", 1]]
+  ↳ app/controllers/blogs_controller.rb:22
+  [1m[35m (6.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/blogs_controller.rb:22
+Redirected to http://localhost:3000/blogs/1
+Completed 302 Found in 32ms (ActiveRecord: 18.0ms)
+
+
+Started GET "/blogs/1" for 10.0.2.2 at 2019-04-11 02:53:28 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BlogsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBlog Load (2.9ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" WHERE "blogs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/blogs_controller.rb:4
+  Rendering blogs/show.html.erb within layouts/application
+  Rendered blogs/show.html.erb within layouts/application (31.9ms)
+Completed 200 OK in 439ms (Views: 366.0ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/blogs/1" for 10.0.2.2 at 2019-04-11 02:53:36 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BlogsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBlog Load (3.7ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" WHERE "blogs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/blogs_controller.rb:4
+  Rendering blogs/show.html.erb within layouts/application
+  Rendered blogs/show.html.erb within layouts/application (12.7ms)
+Completed 200 OK in 276ms (Views: 226.7ms | ActiveRecord: 3.7ms)
+
+
