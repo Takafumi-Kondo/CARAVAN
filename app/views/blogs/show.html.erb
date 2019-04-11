@@ -55,8 +55,12 @@
       </p>
 <!-- 編集部分 -->
       <%= link_to "編集", edit_blog_path(@blog) %>
-      <a href="#">削除</a>
- 
+<!-- 編集と同じく詳細ページから消せるようリンク追加 -->
+      <!-- blog_pathはresourcesが定義してくれています  -->
+      <!-- @blogはアクションから渡ってきてる投稿記事のデータ -->
+      <%= link_to "削除", blog_path(@blog), method: :delete %>
+		<!-- HTTPメソッドがGetのままで詳細ページのリンクになっているのでmethod変更 -->
+
       <div class="author-case clearfix">
         <div class="author-image"></div>
         <div class="author-box">

@@ -20,7 +20,7 @@ class BlogsController < ApplicationController
   def update
     blog = Blog.find(params[:id])
     blog.update(blog_params)
-    redirect_to blog_path(blog)
+    redirect_to blog_path(blog)#記事詳細ページへリダイレクト
   end
 
 #投稿保存createアク追加
@@ -28,6 +28,12 @@ class BlogsController < ApplicationController
   	blog = Blog.new(blog_params)
     blog.save
     redirect_to blogs_path
+  end
+#削除する投稿データ取得と削除処理。同じく投稿データIDはURLに含まれるので、params[:id]で取得
+  def destroy
+    blog = Blog.find(params[:id])
+    blog.destroy
+    redirect_to blogs_path#ビューなし。投稿一覧ページへリダイレクト
   end
 
   private #createアクにフォームから送られてきた投稿を保存する
