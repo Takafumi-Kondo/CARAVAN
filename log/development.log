@@ -102,3 +102,727 @@ Processing by BlogsController#new as HTML
 Completed 200 OK in 372ms (Views: 265.3ms | ActiveRecord: 13.9ms)
 
 
+Started GET "/blogs/new" for 10.0.2.2 at 2019-04-11 01:17:46 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by BlogsController#new as HTML
+  Rendering blogs/new.html.erb within layouts/application
+  Rendered blogs/new.html.erb within layouts/application (18.8ms)
+Completed 200 OK in 1637ms (Views: 1551.6ms | ActiveRecord: 11.7ms)
+
+
+Started GET "/blogs/new" for 10.0.2.2 at 2019-04-11 01:27:16 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BlogsController#new as HTML
+  Rendering blogs/new.html.erb within layouts/application
+  Rendered blogs/new.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 244ms (Views: 208.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/blogs/new" for 10.0.2.2 at 2019-04-11 01:27:27 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BlogsController#new as HTML
+  Rendering blogs/new.html.erb within layouts/application
+  Rendered blogs/new.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 228ms (Views: 184.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/blogs" for 10.0.2.2 at 2019-04-11 01:27:50 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BlogsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ojPIOxk7WJfJYBbhcItfFw9Fq/AUTb5z2pYSj1eyHy94LEvcOG8QJe9jnEmUiudn5LIjwS+UgptT6F167PSjjg==", "blog"=>{"title"=>"a"}, "commit"=>"投稿"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/blogs_controller.rb:14
+  [1m[36mBlog Create (8.6ms)[0m  [1m[32mINSERT INTO "blogs" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "a"], ["created_at", "2019-04-11 01:27:50.895125"], ["updated_at", "2019-04-11 01:27:50.895125"]]
+  ↳ app/controllers/blogs_controller.rb:14
+  [1m[35m (9.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/blogs_controller.rb:14
+Redirected to http://localhost:3000/blogs
+Completed 302 Found in 33ms (ActiveRecord: 18.2ms)
+
+
+Started GET "/blogs" for 10.0.2.2 at 2019-04-11 01:27:50 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/application
+  Rendered blogs/index.html.erb within layouts/application (59.1ms)
+Completed 500 Internal Server Error in 214ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    36:     <section class="blog">
+    37:       <h2 class="blog-headline">Recent Blogs</h2>
+    38:       <div class="blog-box">
+    39:         <% @blogs.each do |blog| %>
+    40:           <div class="blog-item clearfix">
+    41:             <div class="blog-image"><%= image_tag('img/forest.jpg',  class: 'blog-image') %></div>
+    42:             <section class="blog-text">
+  
+app/views/blogs/index.html.erb:39:in `_app_views_blogs_index_html_erb__68728218337873073_70245868480940'
+Started GET "/blogs" for 10.0.2.2 at 2019-04-11 01:29:45 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/application
+  Rendered blogs/index.html.erb within layouts/application (37.1ms)
+Completed 500 Internal Server Error in 177ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    36:     <section class="blog">
+    37:       <h2 class="blog-headline">Recent Blogs</h2>
+    38:       <div class="blog-box">
+    39:         <% @blogs.each do |blog| %>
+    40:           <div class="blog-item clearfix">
+    41:             <div class="blog-image"><%= image_tag('img/forest.jpg',  class: 'blog-image') %></div>
+    42:             <section class="blog-text">
+  
+app/views/blogs/index.html.erb:39:in `_app_views_blogs_index_html_erb__68728218337873073_70245700149000'
+Started GET "/blogs" for 10.0.2.2 at 2019-04-11 01:33:13 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/application
+  Rendered blogs/index.html.erb within layouts/application (28.7ms)
+Completed 500 Internal Server Error in 152ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    36:     <section class="blog">
+    37:       <h2 class="blog-headline">Recent Blogs</h2>
+    38:       <div class="blog-box">
+    39:         <% @blogs.each do |blog| %>
+    40:           <div class="blog-item clearfix">
+    41:             <div class="blog-image"><%= image_tag('img/forest.jpg',  class: 'blog-image') %></div>
+    42:             <section class="blog-text">
+  
+app/views/blogs/index.html.erb:39:in `_app_views_blogs_index_html_erb__68728218337873073_70245834509860'
+Started GET "/blog" for 10.0.2.2 at 2019-04-11 01:33:25 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (No route matches [GET] "/blog"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/" for 10.0.2.2 at 2019-04-11 01:33:31 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /var/lib/gems/2.5.0/gems/railties-5.2.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /var/lib/gems/2.5.0/gems/railties-5.2.3/lib/rails/templates/rails/welcome/index.html.erb (5.1ms)
+Completed 200 OK in 17ms (Views: 10.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/blogs/new" for 10.0.2.2 at 2019-04-11 01:34:13 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BlogsController#new as HTML
+  Rendering blogs/new.html.erb within layouts/application
+  Rendered blogs/new.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 352ms (Views: 306.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/blogs" for 10.0.2.2 at 2019-04-11 01:34:20 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BlogsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"AsFRjOXlcnVFpZCUiqC2xDDUZxaF3fp3ImQi2mgEC4Ipct8wBjKnXU61WHqP7/ULG30SYDVWnjRtyoFZabNM8Q==", "blog"=>{"title"=>"oooo"}, "commit"=>"投稿"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/blogs_controller.rb:14
+  [1m[36mBlog Create (8.3ms)[0m  [1m[32mINSERT INTO "blogs" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "oooo"], ["created_at", "2019-04-11 01:34:20.066587"], ["updated_at", "2019-04-11 01:34:20.066587"]]
+  ↳ app/controllers/blogs_controller.rb:14
+  [1m[35m (4.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/blogs_controller.rb:14
+Redirected to http://localhost:3000/blogs
+Completed 302 Found in 22ms (ActiveRecord: 12.9ms)
+
+
+Started GET "/blogs" for 10.0.2.2 at 2019-04-11 01:34:20 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/application
+  Rendered blogs/index.html.erb within layouts/application (30.6ms)
+Completed 500 Internal Server Error in 189ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    36:     <section class="blog">
+    37:       <h2 class="blog-headline">Recent Blogs</h2>
+    38:       <div class="blog-box">
+    39:         <% @blogs.each do |blog| %>
+    40:           <div class="blog-item clearfix">
+    41:             <div class="blog-image"><%= image_tag('img/forest.jpg',  class: 'blog-image') %></div>
+    42:             <section class="blog-text">
+  
+app/views/blogs/index.html.erb:39:in `_app_views_blogs_index_html_erb__68728218337873073_70245870040480'
+Started GET "/blogs/new" for 10.0.2.2 at 2019-04-11 01:34:39 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BlogsController#new as HTML
+  Rendering blogs/new.html.erb within layouts/application
+  Rendered blogs/new.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 325ms (Views: 262.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/blogs/new" for 10.0.2.2 at 2019-04-11 01:39:13 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BlogsController#new as HTML
+  Rendering blogs/new.html.erb within layouts/application
+  Rendered blogs/new.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 311ms (Views: 267.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/blogs/new" for 10.0.2.2 at 2019-04-11 01:39:21 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BlogsController#new as HTML
+  Rendering blogs/new.html.erb within layouts/application
+  Rendered blogs/new.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 264ms (Views: 224.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/blogs/new" for 10.0.2.2 at 2019-04-11 01:40:00 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BlogsController#new as HTML
+  Rendering blogs/new.html.erb within layouts/application
+  Rendered blogs/new.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 316ms (Views: 270.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/blogs" for 10.0.2.2 at 2019-04-11 01:40:03 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BlogsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6lzJENsCS1YLA7Z57sDaiFneO3NeopbpwX5CJmqfzLzB70esONWefgATfpfrj5lHcndOBe4p8qqO0OGlayiLzw==", "blog"=>{"title"=>"", "category"=>"", "body"=>""}, "commit"=>"投稿"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/blogs_controller.rb:14
+  [1m[36mBlog Create (10.1ms)[0m  [1m[32mINSERT INTO "blogs" ("title", "category", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", ""], ["category", ""], ["body", ""], ["created_at", "2019-04-11 01:40:03.015724"], ["updated_at", "2019-04-11 01:40:03.015724"]]
+  ↳ app/controllers/blogs_controller.rb:14
+  [1m[35m (5.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/blogs_controller.rb:14
+Redirected to http://localhost:3000/blogs
+Completed 302 Found in 23ms (ActiveRecord: 15.5ms)
+
+
+Started GET "/blogs" for 10.0.2.2 at 2019-04-11 01:40:03 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/application
+  Rendered blogs/index.html.erb within layouts/application (25.7ms)
+Completed 500 Internal Server Error in 165ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    36:     <section class="blog">
+    37:       <h2 class="blog-headline">Recent Blogs</h2>
+    38:       <div class="blog-box">
+    39:         <% @blogs.each do |blog| %>
+    40:           <div class="blog-item clearfix">
+    41:             <div class="blog-image"><%= image_tag('img/forest.jpg',  class: 'blog-image') %></div>
+    42:             <section class="blog-text">
+  
+app/views/blogs/index.html.erb:39:in `_app_views_blogs_index_html_erb__68728218337873073_70245871228040'
+Started GET "/blogs/new" for 10.0.2.2 at 2019-04-11 01:40:30 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BlogsController#new as HTML
+  Rendering blogs/new.html.erb within layouts/application
+  Rendered blogs/new.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 239ms (Views: 201.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/blogs" for 10.0.2.2 at 2019-04-11 01:40:43 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BlogsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ZPXDPORJtStgV/BoNYASDTJ6QYgLcByuRmL4yvcqVNNPRk2AB55gA2tHOIYwz1HCGdM0/rv7eO0JzFtJ9p0ToA==", "blog"=>{"title"=>"a", "category"=>"a", "body"=>"a"}, "commit"=>"投稿"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/blogs_controller.rb:14
+  [1m[36mBlog Create (6.1ms)[0m  [1m[32mINSERT INTO "blogs" ("title", "category", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "a"], ["category", "a"], ["body", "a"], ["created_at", "2019-04-11 01:40:43.329029"], ["updated_at", "2019-04-11 01:40:43.329029"]]
+  ↳ app/controllers/blogs_controller.rb:14
+  [1m[35m (6.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/blogs_controller.rb:14
+Redirected to http://localhost:3000/blogs
+Completed 302 Found in 22ms (ActiveRecord: 12.3ms)
+
+
+Started GET "/blogs" for 10.0.2.2 at 2019-04-11 01:40:43 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/application
+  Rendered blogs/index.html.erb within layouts/application (24.8ms)
+Completed 500 Internal Server Error in 146ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    36:     <section class="blog">
+    37:       <h2 class="blog-headline">Recent Blogs</h2>
+    38:       <div class="blog-box">
+    39:         <% @blogs.each do |blog| %>
+    40:           <div class="blog-item clearfix">
+    41:             <div class="blog-image"><%= image_tag('img/forest.jpg',  class: 'blog-image') %></div>
+    42:             <section class="blog-text">
+  
+app/views/blogs/index.html.erb:39:in `_app_views_blogs_index_html_erb__68728218337873073_70245510803580'
+Started GET "/blogs/new" for 10.0.2.2 at 2019-04-11 01:46:25 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BlogsController#new as HTML
+  Rendering blogs/new.html.erb within layouts/application
+  Rendered blogs/new.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 287ms (Views: 251.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/blogs" for 10.0.2.2 at 2019-04-11 01:46:51 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BlogsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"wv4V61chqZhoaAQx/b6ghWINTsimrq5naRlUSKET407pTZtXtPZ8sGN4zN/48eNKSaQ7vhYlyiQmt/fLoKSkPQ==", "blog"=>{"title"=>"たいとる", "category"=>"かて", "body"=>"ほんぶん"}, "commit"=>"投稿"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/blogs_controller.rb:14
+  [1m[36mBlog Create (11.2ms)[0m  [1m[32mINSERT INTO "blogs" ("title", "category", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "たいとる"], ["category", "かて"], ["body", "ほんぶん"], ["created_at", "2019-04-11 01:46:51.930019"], ["updated_at", "2019-04-11 01:46:51.930019"]]
+  ↳ app/controllers/blogs_controller.rb:14
+  [1m[35m (6.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/blogs_controller.rb:14
+Redirected to http://localhost:3000/blogs
+Completed 302 Found in 32ms (ActiveRecord: 17.4ms)
+
+
+Started GET "/blogs" for 10.0.2.2 at 2019-04-11 01:46:51 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/application
+  Rendered blogs/index.html.erb within layouts/application (27.1ms)
+Completed 500 Internal Server Error in 142ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    36:     <section class="blog">
+    37:       <h2 class="blog-headline">Recent Blogs</h2>
+    38:       <div class="blog-box">
+    39:         <% @blogs.each do |blog| %>
+    40:           <div class="blog-item clearfix">
+    41:             <div class="blog-image"><%= image_tag('img/forest.jpg',  class: 'blog-image') %></div>
+    42:             <section class="blog-text">
+  
+app/views/blogs/index.html.erb:39:in `_app_views_blogs_index_html_erb__68728218337873073_70245868722760'
+Started GET "/blogs/new" for 10.0.2.2 at 2019-04-11 01:47:06 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BlogsController#new as HTML
+  Rendering blogs/new.html.erb within layouts/application
+  Rendered blogs/new.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 279ms (Views: 231.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/blogs/new" for 10.0.2.2 at 2019-04-11 01:47:18 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BlogsController#new as HTML
+  Rendering blogs/new.html.erb within layouts/application
+  Rendered blogs/new.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 305ms (Views: 245.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/blogs" for 10.0.2.2 at 2019-04-11 01:47:21 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BlogsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"kLEkJmHLJ4Uf9a938hhc8lDf/315RyuDVZ8r8KL11j1KrqfBQJ9vNzn2Jd8WGeSCuyh3TEKeF2vc4WQFGbNqnA==", "blog"=>{"title"=>"", "category"=>"", "body"=>""}, "commit"=>"投稿"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/blogs_controller.rb:14
+  [1m[36mBlog Create (7.8ms)[0m  [1m[32mINSERT INTO "blogs" ("title", "category", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", ""], ["category", ""], ["body", ""], ["created_at", "2019-04-11 01:47:21.959464"], ["updated_at", "2019-04-11 01:47:21.959464"]]
+  ↳ app/controllers/blogs_controller.rb:14
+  [1m[35m (6.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/blogs_controller.rb:14
+Redirected to http://localhost:3000/blogs
+Completed 302 Found in 24ms (ActiveRecord: 13.9ms)
+
+
+Started GET "/blogs" for 10.0.2.2 at 2019-04-11 01:47:21 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/application
+  Rendered blogs/index.html.erb within layouts/application (42.4ms)
+Completed 500 Internal Server Error in 197ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    36:     <section class="blog">
+    37:       <h2 class="blog-headline">Recent Blogs</h2>
+    38:       <div class="blog-box">
+    39:         <% @blogs.each do |blog| %>
+    40:           <div class="blog-item clearfix">
+    41:             <div class="blog-image"><%= image_tag('img/forest.jpg',  class: 'blog-image') %></div>
+    42:             <section class="blog-text">
+  
+app/views/blogs/index.html.erb:39:in `_app_views_blogs_index_html_erb__68728218337873073_70245871768140'
+Started GET "/blogs" for 10.0.2.2 at 2019-04-11 01:51:55 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/application
+  Rendered blogs/index.html.erb within layouts/application (23.8ms)
+Completed 500 Internal Server Error in 126ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    36:     <section class="blog">
+    37:       <h2 class="blog-headline">Recent Blogs</h2>
+    38:       <div class="blog-box">
+    39:         <% @blogs.each do |blog| %>
+    40:           <div class="blog-item clearfix">
+    41:             <div class="blog-image"><%= image_tag('img/forest.jpg',  class: 'blog-image') %></div>
+    42:             <section class="blog-text">
+  
+app/views/blogs/index.html.erb:39:in `_app_views_blogs_index_html_erb__68728218337873073_70245515875960'
+Started POST "/blogs" for 10.0.2.2 at 2019-04-11 01:51:58 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BlogsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"kLEkJmHLJ4Uf9a938hhc8lDf/315RyuDVZ8r8KL11j1KrqfBQJ9vNzn2Jd8WGeSCuyh3TEKeF2vc4WQFGbNqnA==", "blog"=>{"title"=>"", "category"=>"", "body"=>""}, "commit"=>"投稿"}
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/blogs_controller.rb:14
+  [1m[36mBlog Create (9.0ms)[0m  [1m[32mINSERT INTO "blogs" ("title", "category", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", ""], ["category", ""], ["body", ""], ["created_at", "2019-04-11 01:51:58.665040"], ["updated_at", "2019-04-11 01:51:58.665040"]]
+  ↳ app/controllers/blogs_controller.rb:14
+  [1m[35m (7.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/blogs_controller.rb:14
+Redirected to http://localhost:3000/blogs
+Completed 302 Found in 29ms (ActiveRecord: 16.3ms)
+
+
+Started GET "/blogs" for 10.0.2.2 at 2019-04-11 01:51:58 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/application
+  Rendered blogs/index.html.erb within layouts/application (41.0ms)
+Completed 500 Internal Server Error in 195ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    36:     <section class="blog">
+    37:       <h2 class="blog-headline">Recent Blogs</h2>
+    38:       <div class="blog-box">
+    39:         <% @blogs.each do |blog| %>
+    40:           <div class="blog-item clearfix">
+    41:             <div class="blog-image"><%= image_tag('img/forest.jpg',  class: 'blog-image') %></div>
+    42:             <section class="blog-text">
+  
+app/views/blogs/index.html.erb:39:in `_app_views_blogs_index_html_erb__68728218337873073_70245871414000'
+Started POST "/blogs" for 10.0.2.2 at 2019-04-11 01:52:31 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BlogsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"kLEkJmHLJ4Uf9a938hhc8lDf/315RyuDVZ8r8KL11j1KrqfBQJ9vNzn2Jd8WGeSCuyh3TEKeF2vc4WQFGbNqnA==", "blog"=>{"title"=>"1", "category"=>"1", "body"=>"1"}, "commit"=>"投稿"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/blogs_controller.rb:14
+  [1m[36mBlog Create (7.2ms)[0m  [1m[32mINSERT INTO "blogs" ("title", "category", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "1"], ["category", "1"], ["body", "1"], ["created_at", "2019-04-11 01:52:31.220044"], ["updated_at", "2019-04-11 01:52:31.220044"]]
+  ↳ app/controllers/blogs_controller.rb:14
+  [1m[35m (6.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/blogs_controller.rb:14
+Redirected to http://localhost:3000/blogs
+Completed 302 Found in 26ms (ActiveRecord: 14.1ms)
+
+
+Started GET "/blogs" for 10.0.2.2 at 2019-04-11 01:52:31 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/application
+  Rendered blogs/index.html.erb within layouts/application (43.3ms)
+Completed 500 Internal Server Error in 147ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    36:     <section class="blog">
+    37:       <h2 class="blog-headline">Recent Blogs</h2>
+    38:       <div class="blog-box">
+    39:         <% @blogs.each do |blog| %>
+    40:           <div class="blog-item clearfix">
+    41:             <div class="blog-image"><%= image_tag('img/forest.jpg',  class: 'blog-image') %></div>
+    42:             <section class="blog-text">
+  
+app/views/blogs/index.html.erb:39:in `_app_views_blogs_index_html_erb__68728218337873073_70245514706180'
+Started GET "/blogs" for 10.0.2.2 at 2019-04-11 01:55:59 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/application
+  Rendered blogs/index.html.erb within layouts/application (30.0ms)
+Completed 500 Internal Server Error in 160ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    36:     <section class="blog">
+    37:       <h2 class="blog-headline">Recent Blogs</h2>
+    38:       <div class="blog-box">
+    39:         <% @blogs.each do |blog| %>
+    40:           <div class="blog-item clearfix">
+    41:             <div class="blog-image"><%= image_tag('img/forest.jpg',  class: 'blog-image') %></div>
+    42:             <section class="blog-text">
+  
+app/views/blogs/index.html.erb:39:in `_app_views_blogs_index_html_erb__68728218337873073_70245870997820'
+Started POST "/blogs" for 10.0.2.2 at 2019-04-11 01:56:06 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BlogsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"kLEkJmHLJ4Uf9a938hhc8lDf/315RyuDVZ8r8KL11j1KrqfBQJ9vNzn2Jd8WGeSCuyh3TEKeF2vc4WQFGbNqnA==", "blog"=>{"title"=>"1", "category"=>"1", "body"=>"1"}, "commit"=>"投稿"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/blogs_controller.rb:14
+  [1m[36mBlog Create (10.2ms)[0m  [1m[32mINSERT INTO "blogs" ("title", "category", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "1"], ["category", "1"], ["body", "1"], ["created_at", "2019-04-11 01:56:06.709977"], ["updated_at", "2019-04-11 01:56:06.709977"]]
+  ↳ app/controllers/blogs_controller.rb:14
+  [1m[35m (7.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/blogs_controller.rb:14
+Redirected to http://localhost:3000/blogs
+Completed 302 Found in 32ms (ActiveRecord: 17.7ms)
+
+
+Started GET "/blogs" for 10.0.2.2 at 2019-04-11 01:56:06 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/application
+  Rendered blogs/index.html.erb within layouts/application (38.6ms)
+Completed 500 Internal Server Error in 170ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    36:     <section class="blog">
+    37:       <h2 class="blog-headline">Recent Blogs</h2>
+    38:       <div class="blog-box">
+    39:         <% @blogs.each do |blog| %>
+    40:           <div class="blog-item clearfix">
+    41:             <div class="blog-image"><%= image_tag('img/forest.jpg',  class: 'blog-image') %></div>
+    42:             <section class="blog-text">
+  
+app/views/blogs/index.html.erb:39:in `_app_views_blogs_index_html_erb__68728218337873073_70245513568760'
+Started GET "/blogs" for 10.0.2.2 at 2019-04-11 01:58:32 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/application
+  Rendered blogs/index.html.erb within layouts/application (108.7ms)
+Completed 500 Internal Server Error in 587ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    36:     <section class="blog">
+    37:       <h2 class="blog-headline">Recent Blogs</h2>
+    38:       <div class="blog-box">
+    39:         <% @blog.each do |blog| %>
+    40:           <div class="blog-item clearfix">
+    41:             <div class="blog-image"><%= image_tag('img/forest.jpg',  class: 'blog-image') %></div>
+    42:             <section class="blog-text">
+  
+app/views/blogs/index.html.erb:39:in `_app_views_blogs_index_html_erb__68728218337873073_70245870533840'
+Started POST "/blogs" for 10.0.2.2 at 2019-04-11 01:58:36 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BlogsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"kLEkJmHLJ4Uf9a938hhc8lDf/315RyuDVZ8r8KL11j1KrqfBQJ9vNzn2Jd8WGeSCuyh3TEKeF2vc4WQFGbNqnA==", "blog"=>{"title"=>"1", "category"=>"1", "body"=>"1"}, "commit"=>"投稿"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/blogs_controller.rb:14
+  [1m[36mBlog Create (10.2ms)[0m  [1m[32mINSERT INTO "blogs" ("title", "category", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "1"], ["category", "1"], ["body", "1"], ["created_at", "2019-04-11 01:58:36.178673"], ["updated_at", "2019-04-11 01:58:36.178673"]]
+  ↳ app/controllers/blogs_controller.rb:14
+  [1m[35m (8.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/blogs_controller.rb:14
+Redirected to http://localhost:3000/blogs
+Completed 302 Found in 39ms (ActiveRecord: 18.8ms)
+
+
+Started GET "/blogs" for 10.0.2.2 at 2019-04-11 01:58:36 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/application
+  Rendered blogs/index.html.erb within layouts/application (46.6ms)
+Completed 500 Internal Server Error in 241ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    36:     <section class="blog">
+    37:       <h2 class="blog-headline">Recent Blogs</h2>
+    38:       <div class="blog-box">
+    39:         <% @blog.each do |blog| %>
+    40:           <div class="blog-item clearfix">
+    41:             <div class="blog-image"><%= image_tag('img/forest.jpg',  class: 'blog-image') %></div>
+    42:             <section class="blog-text">
+  
+app/views/blogs/index.html.erb:39:in `_app_views_blogs_index_html_erb__68728218337873073_70245511324900'
+Started GET "/blogs/new" for 10.0.2.2 at 2019-04-11 01:59:38 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (2.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by BlogsController#new as HTML
+  Rendering blogs/new.html.erb within layouts/application
+  Rendered blogs/new.html.erb within layouts/application (17.6ms)
+Completed 200 OK in 1200ms (Views: 1132.8ms | ActiveRecord: 8.0ms)
+
+
+Started POST "/blogs" for 10.0.2.2 at 2019-04-11 01:59:47 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BlogsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7Ov0V9u65ZqdpwjSXETMrLy1iceLwJlE6sLPptpRpDLHWHrrOG0wspa3wDxZC49jlxz8sTtL/QelbGwl2+bjQQ==", "blog"=>{"title"=>"あ", "category"=>"あああ", "body"=>"ああああ"}, "commit"=>"投稿"}
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/blogs_controller.rb:19
+  [1m[36mBlog Create (8.4ms)[0m  [1m[32mINSERT INTO "blogs" ("title", "category", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "あ"], ["category", "あああ"], ["body", "ああああ"], ["created_at", "2019-04-11 01:59:47.641670"], ["updated_at", "2019-04-11 01:59:47.641670"]]
+  ↳ app/controllers/blogs_controller.rb:19
+  [1m[35m (5.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/blogs_controller.rb:19
+Redirected to http://localhost:3000/blogs
+Completed 302 Found in 27ms (ActiveRecord: 13.8ms)
+
+
+Started GET "/blogs" for 10.0.2.2 at 2019-04-11 01:59:47 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/application
+  [1m[36mBlog Load (2.2ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  ↳ app/views/blogs/index.html.erb:39
+  Rendered blogs/index.html.erb within layouts/application (43.3ms)
+Completed 200 OK in 330ms (Views: 296.6ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/blogs" for 10.0.2.2 at 2019-04-11 02:00:20 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/application
+  Rendered blogs/index.html.erb within layouts/application (87.6ms)
+Completed 500 Internal Server Error in 220ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    36:     <section class="blog">
+    37:       <h2 class="blog-headline">Recent Blogs</h2>
+    38:       <div class="blog-box">
+    39:         <% @blogs.each do |blog| %>
+    40:           <div class="blog-item clearfix">
+    41:             <div class="blog-image"><%= image_tag('img/forest.jpg',  class: 'blog-image') %></div>
+    42:             <section class="blog-text">
+  
+app/views/blogs/index.html.erb:39:in `_app_views_blogs_index_html_erb__1593470517917064219_69980620237020'
+Started GET "/blogs/new" for 10.0.2.2 at 2019-04-11 02:00:26 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BlogsController#new as HTML
+  Rendering blogs/new.html.erb within layouts/application
+  Rendered blogs/new.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 266ms (Views: 221.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/blogs" for 10.0.2.2 at 2019-04-11 02:00:31 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BlogsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"RwhgSEKInm8slYKDUu9s2t0jT/K+gPTowe4r02pfAqKs2tOV9jgLp/HkiOW9qQBG1fT5ybPZjVM89bj06ZpRfA==", "blog"=>{"title"=>"a", "category"=>"a", "body"=>"aa"}, "commit"=>"投稿"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/blogs_controller.rb:19
+  [1m[36mBlog Create (9.2ms)[0m  [1m[32mINSERT INTO "blogs" ("title", "category", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "a"], ["category", "a"], ["body", "aa"], ["created_at", "2019-04-11 02:00:31.674318"], ["updated_at", "2019-04-11 02:00:31.674318"]]
+  ↳ app/controllers/blogs_controller.rb:19
+  [1m[35m (6.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/blogs_controller.rb:19
+Redirected to http://localhost:3000/blogs
+Completed 302 Found in 28ms (ActiveRecord: 15.6ms)
+
+
+Started GET "/blogs" for 10.0.2.2 at 2019-04-11 02:00:31 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/application
+  Rendered blogs/index.html.erb within layouts/application (61.7ms)
+Completed 500 Internal Server Error in 217ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    36:     <section class="blog">
+    37:       <h2 class="blog-headline">Recent Blogs</h2>
+    38:       <div class="blog-box">
+    39:         <% @blogs.each do |blog| %>
+    40:           <div class="blog-item clearfix">
+    41:             <div class="blog-image"><%= image_tag('img/forest.jpg',  class: 'blog-image') %></div>
+    42:             <section class="blog-text">
+  
+app/views/blogs/index.html.erb:39:in `_app_views_blogs_index_html_erb__1593470517917064219_69980740360320'
+Started GET "/blogs/new" for 10.0.2.2 at 2019-04-11 02:01:06 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by BlogsController#new as HTML
+  Rendering blogs/new.html.erb within layouts/application
+  Rendered blogs/new.html.erb within layouts/application (13.3ms)
+Completed 200 OK in 1241ms (Views: 1174.3ms | ActiveRecord: 6.2ms)
+
+
+Started POST "/blogs" for 10.0.2.2 at 2019-04-11 02:01:15 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BlogsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"K1IiMdmHrT96J8Av2b68U+jwntuwFBoQP032sZ4uoM7xTaHW+NPljVwkSoc9vwQjAwcW6ovNJvi2M7lEJWgcbw==", "blog"=>{"title"=>"あ", "category"=>"ああ", "body"=>"あああ"}, "commit"=>"投稿"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/blogs_controller.rb:19
+  [1m[36mBlog Create (9.5ms)[0m  [1m[32mINSERT INTO "blogs" ("title", "category", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "あ"], ["category", "ああ"], ["body", "あああ"], ["created_at", "2019-04-11 02:01:15.904511"], ["updated_at", "2019-04-11 02:01:15.904511"]]
+  ↳ app/controllers/blogs_controller.rb:19
+  [1m[35m (5.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/blogs_controller.rb:19
+Redirected to http://localhost:3000/blogs
+Completed 302 Found in 27ms (ActiveRecord: 15.1ms)
+
+
+Started GET "/blogs" for 10.0.2.2 at 2019-04-11 02:01:15 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/application
+  Rendered blogs/index.html.erb within layouts/application (31.6ms)
+Completed 500 Internal Server Error in 130ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    36:     <section class="blog">
+    37:       <h2 class="blog-headline">Recent Blogs</h2>
+    38:       <div class="blog-box">
+    39:         <% @blogs.each do |blog| %>
+    40:           <div class="blog-item clearfix">
+    41:             <div class="blog-image"><%= image_tag('img/forest.jpg',  class: 'blog-image') %></div>
+    42:             <section class="blog-text">
+  
+app/views/blogs/index.html.erb:39:in `_app_views_blogs_index_html_erb__2598834448435086964_69899731745500'
+Started POST "/blogs" for 10.0.2.2 at 2019-04-11 02:01:29 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BlogsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"K1IiMdmHrT96J8Av2b68U+jwntuwFBoQP032sZ4uoM7xTaHW+NPljVwkSoc9vwQjAwcW6ovNJvi2M7lEJWgcbw==", "blog"=>{"title"=>"あ", "category"=>"ああ", "body"=>"あああ"}, "commit"=>"投稿"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/blogs_controller.rb:19
+  [1m[36mBlog Create (10.2ms)[0m  [1m[32mINSERT INTO "blogs" ("title", "category", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "あ"], ["category", "ああ"], ["body", "あああ"], ["created_at", "2019-04-11 02:01:29.766941"], ["updated_at", "2019-04-11 02:01:29.766941"]]
+  ↳ app/controllers/blogs_controller.rb:19
+  [1m[35m (5.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/blogs_controller.rb:19
+Redirected to http://localhost:3000/blogs
+Completed 302 Found in 31ms (ActiveRecord: 16.2ms)
+
+
+Started GET "/blogs" for 10.0.2.2 at 2019-04-11 02:01:29 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/application
+  [1m[36mBlog Load (1.7ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  ↳ app/views/blogs/index.html.erb:39
+  Rendered blogs/index.html.erb within layouts/application (75.3ms)
+Completed 200 OK in 392ms (Views: 344.2ms | ActiveRecord: 1.7ms)
+
+
